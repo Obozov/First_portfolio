@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+	<title>Obozov</title>
+	<link rel="stylesheet" href="css\style.css" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<div class="header__row">
+					<div class="header-item"><a href="#hi">Home</a></div>
+					<div class="header-item"><a href="#case">Experience</a></div>
+					<div class="header-item"><a href="#work">About</a></div>
+					<div class="header-item"><a href="#get">Contact</a></div>
+					<div class="header-item icons">
+						<a href="https://www.facebook.com/profile.php?id=100073701333591"><img width="20"
+								src="img\icons\facebook.png" alt=""></a>
+						<a href="https://www.instagram.com/oboziiik/"><img width="20" src="img\icons\instagram.png"
+								alt=""></a>
+						<a href="https://github.com/Obozov"><img width="20" src="img\icons\github.png" alt=""></a>
+						
+					</div>
+				</div>
+				<input type="checkbox" id="checkbox_toggle"/>
+						<label for="checkbox_toggle" class="hamburger"><span class="hambur-line"></span></label>
+			</div>
+		</header>
+		<div class="content">
+			<div id="hi" class="hi">
+				<div class=" container">
+					<div class="hi__main">
+						<div class="hi__main__left">
+							<div class="hi-name">Denys Obozov</div>
+							<div class="hi-text">Hello, I am from Ukraine, I study in Poland from 01.10.21 to this day, look at
+								my portfolio site!</div>
+							<a href="files\CV_Obozov .pdf">
+								<button class="download-btn">Download CV</button>
+							</a>
+						</div>
+						<div class="hi__main__right">
+							<img src="img\icons\mainIMG-removebg-preview.png" alt="">
+						</div>
+					</div>
+					<div class="hi__bottom">
+						<div class="bottom-title">Worked with:</div>
+						<div class="bottom-cards">
+							<div class="cards-item cards-item1"><span>HTML</span></div>
+							<div class="cards-item cards-item2"><span>CSS</span></div>
+							<div class="cards-item cards-item3"><span>JavaScript</span></div>
+							<div class="cards-item cards-item4"><span>C++</span></div>
+							<div class="cards-item cards-item5"><span>And:<br>SCSS<br>KIT<br>Algorithms<br>Digital
+									technology<br>Mathematical analysis</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="case" class="case">
+				<div class="case_container container">
+					<div class="case__title">My experience</div>
+					<div class="case__text">Unfortunately, I did not have experience working on real projects, but I had
+						experience in classes at the University, my understanding of the computer is much deeper than that of
+						ordinary front-enders from YouTube</div>
+					<div class="case__main">
+						<div class="main-item">
+							<div class="item-right">
+								<div class="item-right-subtitle">
+									<p>Student</p>
+								</div>
+								<div class="item-right-title">Work name</div>
+								<div class="item-right-text">There should be a title of the work, but unfortunately it's empty
+									for now :(</div>
+							</div>
+							<div class="item-left">
+								<img class="item-left-img" width="400" height="300" src="img\1photo.jpg" alt="">
+							</div>
+						</div>
+						<div class="main-item main-item2">
+							<div class="item-right">
+								<div class="item-right-subtitle item-right-subtitle2">
+									<p>Student</p>
+								</div>
+								<div class="item-right-title">Work name</div>
+								<div class="item-right-text">I didn’t want to remove this block from the design, so this is a
+									useless text, you don’t have to read</div>
+							</div>
+							<div class="item-left">
+								<img class="item-left-img" width="420" height="300" src="img\photo3.png" alt="">
+							</div>
+						</div>
+						<div class="main-item main-item3">
+							<div class="item-right">
+								<div class="item-right-subtitle item-right-subtitle3">
+									<p>Student</p>
+								</div>
+								<div class="item-right-title">Work name</div>
+								<div class="item-right-text">Here is my photo</div>
+							</div>
+							<div class="item-left">
+								<img class="item-left-img item-left-img2" width="250" height="300" src="img\photo2.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="work" class="work">
+				<div class="container">
+					<div class="work__title">About</div>
+					<div class="work__text">
+						<p>
+							I made this site in 3 days, 5 hours each, for you I am ready to make the same site in one day, but
+							here I did not use my full potential and I ask you to go to my other portfolio sites, it will
+							already be much cooler there!
+							Here are some facts about me:<br>
+							My favorite movie is The Shawshank Redemption.<br>
+							Favorite game Mafia 2<br>
+							I have a large Cane Corso dog<br>
+							I speak Polish, Ukrainian, Russian and English<br>
+							I play the ukulele<br>
+							I love to travel, I've been to Germany and Switzerland<br>
+							Favorite book is The Witcher books<br>
+							I play basketball</p>
+					</div>
+					<div class="work__slider">
+
+					</div>
+				</div>
+			</div>
+			<div id="get" class="get">
+				<div class="get-container container">
+					<div class="get__title">Get In Touch</div>
+					<div class="get__text">
+						<p>Here you can send me an email</p>
+					</div>
+					<div class="get__send">
+						<div class="contact-form">
+							<form method="post" action="sendmail.php">
+								<label class="m" for="name">NAME</label>
+								<input type="text" id="name" name="name" required>
+
+								<label class="m" for="email">EMAIL</label>
+								<input type="email" id="email" name="email" required>
+
+								<label class="m" for="message">MESSAGE</label>
+								<textarea class="message" id="message" name="message" required></textarea>
+
+								<button type="submit">SEND</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>Made width love</p>
+		</footer>
+	</div>
+</body>
+
+</html>

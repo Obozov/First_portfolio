@@ -1,0 +1,543 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+a{color: inherit}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+/*FONTS*/
+html,body{
+	height: 100%;
+	color: #fff;
+}
+
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.content{
+	flex: 1 1 auto;
+}
+
+
+.container{
+	max-width: 870px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@media (max-width:926px){
+	.container{
+		max-width: 750px;
+	}
+
+}
+
+@media (max-width:808px){
+	.container{
+		max-width: 700px;
+	}
+	
+}
+#checkbox_toggle{
+	display: none;
+}
+.hamburger{
+	display: none;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 30px 0 0 90%;
+}
+.hambur-line{
+	background: #4CAF50;
+	display: block;
+	height: 2.5px;
+	position: relative;
+	width: 24px;
+}
+.hambur-line::before,
+.hambur-line::after{
+	background: #4CAF50;
+	content: '';
+	display: block;
+	position: absolute;
+	transition: all .3s;
+	width: 100%;
+	height: 100%;
+}
+.hambur-line::before{
+	top: 7px;
+	
+}
+.hambur-line::after{
+	top: -7px;
+}
+@media(max-width:768px){
+	
+	.header__row{
+		display: none;
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;
+		text-align: center;
+		right: 0;
+		left: 0;
+		
+	 }
+
+	 #checkbox_toggle:checked ~ .header__row{
+		display: block;
+		max-height: 100%;
+		transition: all .5s;
+	 }
+	 .hamburger{
+		display: block;
+
+	 }
+}
+@media (max-width:532px){
+	.case{
+		padding-top: 50px;
+	}
+}
+@media (max-width:330px){
+	.case{
+		padding-top: 170px;
+	}
+	
+}
+
+//====HEADER===============================
+.header{
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	color:#aea9a9;
+	background: #1B1B1B;
+	height: 70px;
+	width: 100%;
+	max-width: 1100px;
+	position: fixed;
+	z-index: 99;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0 0 10px 5px rgba(221, 221, 221, 0.15);
+	opacity: 0.8;
+	
+.header__container{
+	max-width: 920px;
+	
+}
+.header__row{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 25px;
+}
+
+.header-item :hover{
+	font-size: 20px;
+	transition: 0.9s;
+}
+.icons{
+	max-width: 90px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.icons img:hover{
+	transform: scale(1.6);
+	transition: transform 0.2s ease-in-out;
+	
+}
+
+
+}
+//====HEADER===============================
+
+
+//====HI================
+.hi{	
+	height: 891px;
+	background: #000;
+
+.hi__main{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 136px;
+}
+.hi__main__left{
+	max-width: 400px;
+}
+.hi__main__right{
+	
+	left:50%;
+	transform: translate(24%);
+}
+.hi-name{
+	font-family: 'Nunito', sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+.hi-text{
+	font-size: 15px;
+	font-family: 'Inconsolata', monospace;
+	padding: 20px 0;
+}
+.download-btn {
+	background-color: #4CAF50; /* цвет фона кнопки */
+	color: white; /* цвет текста кнопки */
+	padding: 16px 32px; /* отступы внутри кнопки */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	
+	position: relative;
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-80%);
+	
+ }
+ 
+ .download-btn::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background-color: rgba(255, 255, 255, 0.5); /* цвет анимации */
+	opacity: 1;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.3s ease-out, height 0.3s ease-out, opacity 0.3s ease-out;
+ }
+ 
+ .download-btn:hover::before {
+	width: 300px;
+	height: 300px;
+	opacity: 0;
+ }
+
+.hi__bottom{
+	
+	min-height: 170px;
+	border: 2px solid #7d7878;
+	border-radius: 30px;
+	background: #ffffff;
+	font-family: 'Inconsolata', monospace;
+}
+.bottom-title{
+	color: #000;
+	font-size: 20px;
+	margin: 5px 0 15px 10px;
+}
+.bottom-cards{
+	
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	
+}
+.cards-item{
+	display: flex;
+	color: #000;
+	align-items: end;
+	justify-content: center;
+	max-width: 100px;
+	width: 100%;
+	height: 116px;
+	transition: transform 0.2s ease-in-out;
+}
+.cards-item:hover{
+	transform: scale(1.2);
+	
+}
+.cards-item1{
+	background: url('../img/html-5.png') center 0/100px 90px no-repeat;
+
+}
+.cards-item2{
+	background: url('../img/css-3.png') center 0/100px 90px no-repeat;
+}
+.cards-item3{
+	background: url('../img/java-script.png') center 0/100px 90px no-repeat;
+}
+.cards-item4{
+	background: url('../img/c-.png') center 0/90px 90px no-repeat;
+}
+.cards-item5{
+	font-size: 15px;
+	font-family: 'Inconsolata', monospace;
+	color: #aea9a9;
+}
+.cards-item5:hover{
+	color: #000000;
+}	
+}
+//====HI================
+
+//===CASE============
+.case {
+
+	color:#000;
+	font-family: 'Nunito', sans-serif;
+	
+
+.case__title {
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 50px;
+}
+.case__text {
+	font-family: 'Inconsolata', monospace;
+	font-size: 15px;
+	margin: 10px auto 40px auto;
+	max-width: 500px;
+	width: 100%;
+	text-align: center;
+	line-height: 1.4;
+}
+.main-item {
+	display: flex;
+	flex-direction:row-reverse;
+	justify-content: space-between;
+	padding-bottom: 40px;
+}
+.item-right {
+	max-width: 400px;
+	width: 100%;
+}
+.item-right-subtitle {
+	border-radius: 10px;
+	background: rgb(255, 230, 140);
+	width: 100px;
+	margin-left: 75%;
+}
+.item-right-subtitle p{
+	margin-left: 15%;
+	color:#d3a913;
+	font-size: 20px;
+	text-align: start;
+}
+.item-right-title {
+	font-size: 30px;
+	padding-top: 20px;
+}
+.item-right-text {
+	font-family: 'Inconsolata', monospace;
+	font-size: 20px;
+	padding-top: 110px;
+}
+.item-left {
+	padding-right: 10px;
+	
+}
+.item-left-img {
+	border-radius: 10px;
+}
+
+.main-item2{
+	flex-direction:row;
+	.item-right-subtitle2{
+		margin: 0;		
+		background: rgb(127, 232, 255);
+		p{
+			color: #009da8;
+		}
+	}	
+	.item-left-img{
+
+	}
+
+
+}
+.item-right-subtitle3{
+	background: rgb(26, 211, 63);
+		p{
+			color: #008d2f;
+		}
+}
+}
+//===CASE============
+
+//===WORK==========
+.work {
+	height: 600px;
+	background: #000;
+	
+
+.container {
+}
+.work__title {
+	font-family: 'Nunito', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 150px;
+}
+.work__text {
+	
+	text-align: center;
+	font-family: 'Inconsolata', monospace;
+	max-width: 400px;
+	width: 100%;
+	margin: 30px auto;
+}
+.work__slider {
+}
+
+}
+//===WORK==========
+
+//===GET===========
+.get {//Я знаю что это не работает, надеюсь в будующем выучу джаву и пхп
+	height: 500px;
+	color: #000;
+
+.get-container {
+	
+}
+
+.get__title {
+	font-family: 'Nunito', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	padding: 40px 0 20px 0;
+}
+.get__text {
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Inconsolata', monospace;
+	max-width: 400px;
+	width: 100%;
+	font-size: 20px;
+}
+.get__send {
+}
+.get__mail {
+}
+    .contact-form {
+      max-width: 800px;
+		width: 100%;
+      margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		padding-top: 15px;
+		font-family: 'Inconsolata', monospac
+		
+    }
+
+    label, input, textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+		width: 300px;
+    }
+	 .message{
+		resize: none;
+		height: 100px;
+	 }
+
+	 .m{
+		font-size: 20px;
+		
+	 }
+    button[type="submit"] {
+		background-color: #4CAF50; /* цвет фона кнопки */
+	color: white; /* цвет текста кнопки */
+	padding: 16px 32px; /* отступы внутри кнопки */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	position: relative;
+	overflow: hidden;
+	left:15%;
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	font-size: 25px;
+      border-radius: 5px;
+      border: none;
+		width: 200px;
+    }
+	}
+//===GET===========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=======FOOTER===================
+.footer{
+	font-family: 'Inconsolata', monospace;
+	height: 70px;
+	background: #f7f7f7;
+	text-align: center; 
+	color: #000; 	
+}
+.footer p{
+	padding-top: 2%;	
+}
